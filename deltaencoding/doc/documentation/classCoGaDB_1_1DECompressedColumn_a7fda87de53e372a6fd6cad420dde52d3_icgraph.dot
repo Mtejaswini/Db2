@@ -1,0 +1,11 @@
+digraph "CoGaDB::DECompressedColumn::insert"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CoGaDB::DECompressedColumn\l::insert",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CoGaDB::DECompressedColumn\l::insert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoGaDB_1_1DECompressedColumn.htm#aa70260fe37a9a7b5757459bee69ea860"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CoGaDB::DECompressedColumn\l::load",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoGaDB_1_1DECompressedColumn.htm#a57270cdd787757c81223d644180f6cfc",tooltip="load column from disc "];
+}

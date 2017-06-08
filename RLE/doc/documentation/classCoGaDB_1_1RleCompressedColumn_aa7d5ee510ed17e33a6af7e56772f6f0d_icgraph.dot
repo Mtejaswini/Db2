@@ -1,0 +1,15 @@
+digraph "CoGaDB::RleCompressedColumn::size"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="CoGaDB::RleCompressedColumn\l::size",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CoGaDB::RleCompressedColumn\l::operator[]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoGaDB_1_1RleCompressedColumn.htm#a309c42ac681ff9a8e2dfbf2cf54684d4",tooltip="defines operator[] for this class, which enables the user to thread all typed columns as arrays..."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CoGaDB::RleCompressedColumn\l::print",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoGaDB_1_1RleCompressedColumn.htm#a1acab2c1a5ed60e8b51242eca0389e7c",tooltip="prints the content of a column "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CoGaDB::RleCompressedColumn\l::remove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoGaDB_1_1RleCompressedColumn.htm#a209bcbd1ed0b802a640ab6018268b5e0",tooltip="deletes the value on position tid "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CoGaDB::RleCompressedColumn\l::update",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoGaDB_1_1RleCompressedColumn.htm#ad8437c46d4741d5e23383cebbc2c2737",tooltip="updates the value on position tid with a value new_Value "];
+}

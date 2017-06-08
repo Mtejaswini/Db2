@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['name_5f',['name_',['../classCoGaDB_1_1ColumnBase.htm#adde5ec5902be1d18cc625cc41526e241',1,'CoGaDB::ColumnBase']]]
+  ['icompressed_5fvector',['icompressed_vector',['../classCoGaDB_1_1DECompressedColumn.htm#a55b60e990b0b9bbd9bbdbed99b1aee79',1,'CoGaDB::DECompressedColumn']]],
+  ['itotalvalue',['iTotalValue',['../classCoGaDB_1_1DECompressedColumn.htm#ad0aebbbfbd376c66f1239c52c00535de',1,'CoGaDB::DECompressedColumn']]]
 ];

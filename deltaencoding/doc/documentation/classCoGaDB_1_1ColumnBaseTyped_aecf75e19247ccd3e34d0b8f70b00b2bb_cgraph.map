@@ -1,0 +1,4 @@
+<map id="CoGaDB::ColumnBaseTyped::minus" name="CoGaDB::ColumnBaseTyped::minus">
+<area shape="rect" id="node2" href="$classCoGaDB_1_1ColumnBaseTyped.htm#a0f43450e8224027b9d1055ba8d758477" title="defines operator[] for this class, which enables the user to thread all typed columns as arrays..." alt="" coords="248,5,443,47"/>
+<area shape="rect" id="node3" href="$classCoGaDB_1_1ColumnBaseTyped.htm#a8ff087045b933adcd017877c1f0802bc" title="returns the number of values (rows) in a column " alt="" coords="248,71,443,112"/>
+</map>

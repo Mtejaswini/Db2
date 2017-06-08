@@ -1,0 +1,5 @@
+<map id="CoGaDB::RleCompressedColumn::update" name="CoGaDB::RleCompressedColumn::update">
+<area shape="rect" id="node2" href="$classCoGaDB_1_1RleCompressedColumn.htm#a07694761e68c0c38cfd0441859b0708e" title="deletes all values stored in the column " alt="" coords="276,5,499,47"/>
+<area shape="rect" id="node3" href="$classCoGaDB_1_1RleCompressedColumn.htm#a0b03b46ef34c5483f435f3aec1e23863" title="appends a value new_Value to end of column " alt="" coords="276,71,499,112"/>
+<area shape="rect" id="node4" href="$classCoGaDB_1_1RleCompressedColumn.htm#aa7d5ee510ed17e33a6af7e56772f6f0d" title="returns the number of values (rows) in a column " alt="" coords="276,136,499,177"/>
+</map>

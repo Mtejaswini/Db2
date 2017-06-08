@@ -8,6 +8,5 @@ var searchData=
   ['positionlistpairptr',['PositionListPairPtr',['../namespaceCoGaDB.htm#a33ccb4afa788aed82f287658a7b76d2b',1,'CoGaDB']]],
   ['positionlistptr',['PositionListPtr',['../namespaceCoGaDB.htm#ae7e30b13ad239f7010ad333125321e9a',1,'CoGaDB']]],
   ['print',['print',['../classCoGaDB_1_1RleCompressedColumn.htm#a1acab2c1a5ed60e8b51242eca0389e7c',1,'CoGaDB::RleCompressedColumn::print()'],['../classCoGaDB_1_1ColumnBase.htm#ac4bb2af029ab94ba3689cfd1864e4e6c',1,'CoGaDB::ColumnBase::print()'],['../classCoGaDB_1_1Column.htm#aca3e004b9b02372235311f16c79a2bcb',1,'CoGaDB::Column::print()'],['../classCoGaDB_1_1ColumnBaseTyped.htm#ac87ff73aa6d72bbf3b5ae510327e22c6',1,'CoGaDB::ColumnBaseTyped::print()'],['../classCoGaDB_1_1CompressedColumn.htm#ad1805b7bec6013529aa2aaa17117d08b',1,'CoGaDB::CompressedColumn::print()'],['../classCoGaDB_1_1LookupArray.htm#a976585f7499909ef8433ec331194bfed',1,'CoGaDB::LookupArray::print()']]],
-  ['print_5ftime_5fmeasurement',['print_time_measurement',['../namespaceCoGaDB.htm#a256e6fd79fe870ea16ee7fe0c8c3d7afa657b4c20216cd1b6ba7972517054552e',1,'CoGaDB']]],
   ['projection',['PROJECTION',['../namespaceCoGaDB.htm#aa87ab7d22b15cd49bd586b2140db336ba7b557a49e96be0d630c68ccdef40a337',1,'CoGaDB']]]
 ];

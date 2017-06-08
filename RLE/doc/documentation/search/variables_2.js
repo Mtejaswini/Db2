@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lookup_5f',['lookup_',['../classCoGaDB_1_1RleCompressedColumn.htm#a9522f29a5199a10c2a84e3f01fdc309e',1,'CoGaDB::RleCompressedColumn']]]
+  ['name_5f',['name_',['../classCoGaDB_1_1ColumnBase.htm#adde5ec5902be1d18cc625cc41526e241',1,'CoGaDB::ColumnBase']]]
 ];

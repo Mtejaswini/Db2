@@ -4,7 +4,6 @@ var searchData=
   ['rle_5fcompressed_5fcolumn_2ehpp',['rle_compressed_column.hpp',['../rle__compressed__column_8hpp.htm',1,'']]],
   ['rle_5fcount',['rle_count',['../classCoGaDB_1_1RleCompressedColumn.htm#a2ad9259066efb08d9c0dd5e0f9c9fbd4',1,'CoGaDB::RleCompressedColumn']]],
   ['rle_5fvector',['rle_vector',['../classCoGaDB_1_1RleCompressedColumn.htm#a5c5b363abbfc1b4254a510b7c8e06d2c',1,'CoGaDB::RleCompressedColumn']]],
-  ['rlecompressedcolumn',['RleCompressedColumn',['../classCoGaDB_1_1RleCompressedColumn.htm',1,'CoGaDB']]],
   ['rlecompressedcolumn',['RleCompressedColumn',['../classCoGaDB_1_1RleCompressedColumn.htm#a507b115e6470dd9c9c725df18991d43c',1,'CoGaDB::RleCompressedColumn']]],
-  ['rleinsertion',['rleInsertion',['../classCoGaDB_1_1RleCompressedColumn.htm#ae855b6c4752e5727d8a09bf9c07589fb',1,'CoGaDB::RleCompressedColumn']]]
+  ['rlecompressedcolumn',['RleCompressedColumn',['../classCoGaDB_1_1RleCompressedColumn.htm',1,'CoGaDB']]]
 ];

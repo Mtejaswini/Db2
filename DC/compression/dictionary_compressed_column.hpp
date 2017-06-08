@@ -26,7 +26,6 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 	template <typename InputIterator>
 	bool insert(InputIterator first, InputIterator last);
 
-	//T ikramCompression(const T& ikramVal);
 	virtual bool update(TID tid, const boost::any& new_value);
 	virtual bool update(PositionListPtr tid, const boost::any& new_value);	
 	
@@ -53,8 +52,6 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 	/*! values*/
 	std::vector<int> dc_vector;
 	std::vector<T> dictionary;
-	//std::vector<int> indexdc_vector;
-
 };
 
 
@@ -63,9 +60,6 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 	
 	template<class T>
 	DictionaryCompressedColumn<T>::DictionaryCompressedColumn(const std::string& name, AttributeType db_type) : CompressedColumn<T>(name, db_type), dc_vector(), dictionary(){
-
-		std::cout << "Ikram : DCC created " << std::endl;
-		
 	}
 
 	template<class T>
@@ -75,14 +69,10 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 
 	template<class T>
 	bool DictionaryCompressedColumn<T>::insert(const boost::any& new_value){
-		//cout << new_value << endl;
-		
 		if(new_value.empty()) return false;
 		if(typeid(T)==new_value.type()){
 			 T value = boost::any_cast<T>(new_value);
-			cout << value << endl;
-			 dc_vector.push_back(1);
-			 return true;
+			 return this->insert(value);
 		}
 		
 		
@@ -92,24 +82,17 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 	template<class T>
 	bool DictionaryCompressedColumn<T>::insert(const T& new_value){
 		
-		int pos;
-		//std::cout << "ikram : in insert value is -> " << new_value << endl;
-		//print();
+		unsigned pos;
 		pos = find(dictionary.begin(), dictionary.end(), new_value) - dictionary.begin();
 		if(pos < dictionary.size())
 		{
-			cout << "already" << endl;
 			dc_vector.push_back(pos);
 		}
 		else		
 		{
 			dictionary.push_back(new_value);
 			dc_vector.push_back(dictionary.size() - 1);
-		}
-		
-	
-		//dc_vector.push_back(new_value);
-		
+		}	
 		return true;
 	}
 	
@@ -117,7 +100,13 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 	template <typename InputIterator>
 	bool DictionaryCompressedColumn<T>::insert(InputIterator first, InputIterator last){
 		
-		this->dc_vector.insert(this->dc_vector.end(),first,last);
+		for (InputIterator it=first; it != last; ++it)
+		{
+			if (!this->insert(*it))
+			{
+				return false;
+			}
+		}
 		
 		return true;
 	}
@@ -161,44 +150,51 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 		
 		if(new_value.empty()) return false;
 		if(typeid(T)==new_value.type()){
-			 T value = boost::any_cast<T>(new_value);
-			int pos;
+			T value = boost::any_cast<T>(new_value);
+			unsigned pos;
 			pos = find(dictionary.begin(), dictionary.end(), value) - dictionary.begin();
-		if(pos < dictionary.size())
-		{
-			cout << "already" << endl;
-			dc_vector[tid] = pos;
-		}
-		else		
-		{
-			dictionary.push_back(value);
-			dc_vector[tid] = (dictionary.size() - 1);
-		}
-			 //dc_vector[tid]= 1;
-			 return true;
+			if(pos < dictionary.size())
+			{
+				dc_vector[tid] = pos;
+			}
+			else		
+			{
+				dictionary.push_back(value);
+				dc_vector[tid] = (dictionary.size() - 1);
+			}
+			return true;
 		}else{
-			std::cout << "Ikram : Fatal Error!!! Typemismatch for column " << this->name_ << std::endl; 
+			std::cout << "Fatal Error!!! Typemismatch for column " << this->name_ << std::endl; 
 		}
 		
 		return false;
 	}
 
 	template<class T>
-	bool DictionaryCompressedColumn<T>::update(PositionListPtr tids, const boost::any& new_value){
-		//cout << new_value << endl;		
-		
+	bool DictionaryCompressedColumn<T>::update(PositionListPtr tids, const boost::any& new_value){	
 		if(!tids)
 			return false;
 		if(new_value.empty()) return false;
-		if(typeid(T)==new_value.type()){
-			 T value = boost::any_cast<T>(new_value);
-			 for(unsigned int i=0;i<tids->size();i++){
-				TID tid=(*tids)[i];
-				cout << value << endl << tid << endl;
-			 }
-			 return true;
+		if(typeid(T)==new_value.type()){		 
+			T value = boost::any_cast<T>(new_value);
+			unsigned size = dc_vector.size();
+			vector<T> dictionary_ = dictionary;
+			vector<int> dc_vector_ = dc_vector;
+			clearContent();
+
+			for(unsigned int id=0;id<tids->size();id++){
+				TID tid=(*tids)[id];
+				for(TID i = 0; i < size; i ++)	{
+					if(i!=tid) {
+						this->insert(dictionary_[dc_vector_[i]]);
+					}
+					else
+						this->insert(value);
+			 	}
+		 	}
+			return true;
 		}else{
-			std::cout << "Ikram : Fatal Error!!! Typemismatch for column " << this->name_ << std::endl; 
+			std::cout << "Fatal Error!!! Typemismatch for column " << this->name_ << std::endl; 
 		}
 		
 		return false;		
@@ -206,9 +202,8 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 	
 	template<class T>
 	bool DictionaryCompressedColumn<T>::remove(TID tid){
-	
 		dc_vector.erase(dc_vector.begin()+tid);
-		
+	
 		return true;	
 	}
 	
@@ -221,23 +216,12 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 		if(tids->empty())
 			return false;		
 
-		//assert();
-
 		typename PositionList::reverse_iterator rit;
 
+		//delete tuples in reverse order, otherwise the first deletion would invalidate all other tids
 		for (rit = tids->rbegin(); rit!=tids->rend(); ++rit)
 			dc_vector.erase(dc_vector.begin()+(*rit));
-
-		/*
-		//delete tuples in reverse order, otherwise the first deletion would invalidate all other tids
-		unsigned int i=tids->size()-1;
-		while(true)	
-			TID = (*tids)[i];
-			dc_vector.erase(dc_vector.begin()+tid);		
-			if(i==0) break;
-		}*/
-		
-		
+			
 		return true;			
 	}
 
@@ -245,18 +229,15 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 	bool DictionaryCompressedColumn<T>::clearContent(){
 	
 		dc_vector.clear();
-		
+		dictionary.clear();
 		return true;
 	}
 
 	template<class T>
 	bool DictionaryCompressedColumn<T>::store(const std::string& path_){
-	
-		//string path("data/");
 		std::string path(path_);
 		path += "/";
 		path += this->name_;
-		//std::cout << "Writing Column " << this->getName() << " to File " << path << std::endl;
 		std::ofstream outfile (path.c_str(),std::ios_base::binary | std::ios_base::out);
 		boost::archive::binary_oarchive oa(outfile);
 
@@ -264,6 +245,17 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 
 		outfile.flush();
 		outfile.close();
+
+		std::string path2(path_);
+		path2 += "/dict";
+		path2 += this->name_;
+		std::ofstream outfile2 (path2.c_str(),std::ios_base::binary | std::ios_base::out);
+		boost::archive::binary_oarchive oa2(outfile2);
+
+		oa2 << dictionary;
+
+		outfile2.flush();
+		outfile2.close();
 		
 		return true;
 	}
@@ -271,32 +263,32 @@ class DictionaryCompressedColumn : public CompressedColumn<T>{
 	bool DictionaryCompressedColumn<T>::load(const std::string& path_){
 	
 		std::string path(path_);
-		//std::cout << "Loading column '" << this->name_ << "' from path '" << path << "'..." << std::endl;
-		//string path("data/");
 		path += "/";
 		path += this->name_;
 		
-		//std::cout << "Opening File '" << path << "'..." << std::endl;
 		std::ifstream infile (path.c_str(),std::ios_base::binary | std::ios_base::in);
 		boost::archive::binary_iarchive ia(infile);
 		ia >> dc_vector;
 		infile.close();
 
-
+		std::string path2(path_);
+		path2 += "/dict";
+		path2 += this->name_;
+	
+		std::ifstream infile2 (path2.c_str(),std::ios_base::binary | std::ios_base::in);
+		boost::archive::binary_iarchive ia2(infile2);
+		ia2 >> dictionary;
+		infile2.close();
 		return true;
 	}
 
 	template<class T>
 	T& DictionaryCompressedColumn<T>::operator[](const int index){
-		//static T t;
-		//return t;
-		
 		return dictionary[dc_vector[index]];
 	}
 
 	template<class T>
 	unsigned int DictionaryCompressedColumn<T>::getSizeinBytes() const throw(){
-		//return 0; 
 		return dc_vector.capacity()*sizeof(T);
 	}
 

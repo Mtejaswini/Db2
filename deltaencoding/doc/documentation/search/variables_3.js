@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['return_5fvariable',['Return_Variable',['../classCoGaDB_1_1DECompressedColumn.htm#abcd62b19b0fb2f3fc71702b52c6faff2',1,'CoGaDB::DECompressedColumn']]]
+  ['name_5f',['name_',['../classCoGaDB_1_1ColumnBase.htm#adde5ec5902be1d18cc625cc41526e241',1,'CoGaDB::ColumnBase']]]
 ];

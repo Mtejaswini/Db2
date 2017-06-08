@@ -15,19 +15,19 @@ using namespace CoGaDB;
 int main(){
 	/*Adapt the Column to your implemented method*/
             std::cout <<"Dic: "<< std::endl;
-	if(!unittest<Column, int>()){
+	if(!unittest<DictionaryCompressedColumn, int>()){
 		std::cout << "At least one Unittest Failed!" << std::endl;	
 		return -1;	
 	}
 	std::cout << "Unitests Passed!" << std::endl;
 
-	if(!unittest<Column,float>()){
+	if(!unittest<DictionaryCompressedColumn,float>()){
 		std::cout << "At least one Unittest Failed!" << std::endl;	
 		return -1;	
 	}
 	std::cout << "Unitests Passed!" << std::endl;
 
-	if(!unittest<Column ,std::string>()){
+	if(!unittest<DictionaryCompressedColumn ,std::string>()){
 		std::cout << "At least one Unittest Failed!" << std::endl;	
 		return -1;	
 	}

@@ -1,0 +1,5 @@
+<map id="CoGaDB::DECompressedColumn::update" name="CoGaDB::DECompressedColumn::update">
+<area shape="rect" id="node2" href="$classCoGaDB_1_1DECompressedColumn.htm#a1f525b7d2c72b81610ac00661fec6e88" title="returns the number of values (rows) in a column " alt="" coords="275,5,496,47"/>
+<area shape="rect" id="node3" href="$namespaceCoGaDB.htm#a9c8e2413011ea32d93fdcc47e653429b" title="CoGaDB::stringadd" alt="" coords="317,71,453,98"/>
+<area shape="rect" id="node4" href="$namespaceCoGaDB.htm#aa1ecf6eadb0b893b42337a61eefd52d5" title="CoGaDB::stringsub" alt="" coords="317,122,453,149"/>
+</map>

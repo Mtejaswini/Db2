@@ -1,0 +1,5 @@
+<map id="CoGaDB::DictionaryCompressedColumn::update" name="CoGaDB::DictionaryCompressedColumn::update">
+<area shape="rect" id="node2" href="$classCoGaDB_1_1DictionaryCompressedColumn.htm#ad409f6410bbb1e06876e8b90f7fd0cc8" title="deletes all values stored in the column " alt="" coords="269,5,485,47"/>
+<area shape="rect" id="node3" href="$classCoGaDB_1_1DictionaryCompressedColumn.htm#ab375808753f177986ecb8cc824bf2f99" title="appends a value new_Value to end of column " alt="" coords="269,71,485,112"/>
+<area shape="rect" id="node4" href="$classCoGaDB_1_1DictionaryCompressedColumn.htm#a230cfc38850de02c04b109701976b0d0" title="returns the number of values (rows) in a column " alt="" coords="269,136,485,177"/>
+</map>

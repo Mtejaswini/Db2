@@ -1,0 +1,6 @@
+<map id="CoGaDB::RleCompressedColumn::size" name="CoGaDB::RleCompressedColumn::size">
+<area shape="rect" id="node2" href="$classCoGaDB_1_1RleCompressedColumn.htm#a309c42ac681ff9a8e2dfbf2cf54684d4" title="defines operator[] for this class, which enables the user to thread all typed columns as arrays..." alt="" coords="276,5,499,47"/>
+<area shape="rect" id="node3" href="$classCoGaDB_1_1RleCompressedColumn.htm#a1acab2c1a5ed60e8b51242eca0389e7c" title="prints the content of a column " alt="" coords="276,71,499,112"/>
+<area shape="rect" id="node4" href="$classCoGaDB_1_1RleCompressedColumn.htm#a209bcbd1ed0b802a640ab6018268b5e0" title="deletes the value on position tid " alt="" coords="276,136,499,177"/>
+<area shape="rect" id="node5" href="$classCoGaDB_1_1RleCompressedColumn.htm#ad8437c46d4741d5e23383cebbc2c2737" title="updates the value on position tid with a value new_Value " alt="" coords="276,201,499,243"/>
+</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rle_5fcount',['rle_count',['../classCoGaDB_1_1RleCompressedColumn.htm#a2ad9259066efb08d9c0dd5e0f9c9fbd4',1,'CoGaDB::RleCompressedColumn']]],
-  ['rle_5fvector',['rle_vector',['../classCoGaDB_1_1RleCompressedColumn.htm#a5c5b363abbfc1b4254a510b7c8e06d2c',1,'CoGaDB::RleCompressedColumn']]]
+  ['tids_5f',['tids_',['../classCoGaDB_1_1LookupArray.htm#a446e094d9d595d111d92dacbd4d5a5d2',1,'CoGaDB::LookupArray']]],
+  ['type_5ftid_5fcomparator',['type_tid_comparator',['../classCoGaDB_1_1Column.htm#ac4ad5def8ec3c86645fc18acf516bf5a',1,'CoGaDB::Column']]]
 ];

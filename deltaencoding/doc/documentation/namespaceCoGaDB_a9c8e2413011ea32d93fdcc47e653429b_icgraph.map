@@ -1,0 +1,8 @@
+<map id="CoGaDB::stringadd" name="CoGaDB::stringadd">
+<area shape="rect" id="node2" href="$classCoGaDB_1_1DECompressedColumn.htm#ab218fecc51f759abc894f2481883bea0" title="generic function for fetching a value form a column (slow) " alt="" coords="189,5,436,32"/>
+<area shape="rect" id="node3" href="$classCoGaDB_1_1DECompressedColumn.htm#a7fc107e66e4a9f704a9f23efd3041fd3" title="CoGaDB::DECompressedColumn\l::insert" alt="" coords="202,57,423,98"/>
+<area shape="rect" id="node4" href="$classCoGaDB_1_1DECompressedColumn.htm#a7c6687dce43ce5b8efbce930d5a7204e" title="defines operator[] for this class, which enables the user to thread all typed columns as arrays..." alt="" coords="202,122,423,163"/>
+<area shape="rect" id="node5" href="$classCoGaDB_1_1DECompressedColumn.htm#a79db6f57a5f73b5392057837cf756088" title="prints the content of a column " alt="" coords="202,187,423,229"/>
+<area shape="rect" id="node6" href="$classCoGaDB_1_1DECompressedColumn.htm#a1fe079c3151244e1d7133701110894e2" title="deletes the value on position tid " alt="" coords="202,253,423,294"/>
+<area shape="rect" id="node7" href="$classCoGaDB_1_1DECompressedColumn.htm#a8b72d444ed6af75bb53a69e79e8e4cfe" title="updates the value on position tid with a value new_Value " alt="" coords="202,318,423,359"/>
+</map>

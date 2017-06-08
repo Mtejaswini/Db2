@@ -6,7 +6,7 @@
 #include <core/compressed_column.hpp>
 
 /*this is the include for the example compressed column with empty implementation*/
-#include <compression/rle_compressed_column.hpp>
+#include <compression/deltaEncoding_compressed_column.hpp>
 
 #include  "unittest.hpp"
 
@@ -15,19 +15,19 @@ using namespace CoGaDB;
 int main(){
 	/*Adapt the Column to your implemented method*/
             std::cout <<"Dic: "<< std::endl;
-	if(!unittest<Column, int>()){
+	if(!unittest<DECompressedColumn, int>()){
 		std::cout << "At least one Unittest Failed!" << std::endl;	
 		return -1;	
 	}
 	std::cout << "Unitests Passed!" << std::endl;
 
-	if(!unittest<Column,float>()){
+	if(!unittest<DECompressedColumn,float>()){
 		std::cout << "At least one Unittest Failed!" << std::endl;	
 		return -1;	
 	}
 	std::cout << "Unitests Passed!" << std::endl;
 
-	if(!unittest<Column ,std::string>()){
+	if(!unittest<DECompressedColumn ,std::string>()){
 		std::cout << "At least one Unittest Failed!" << std::endl;	
 		return -1;	
 	}
